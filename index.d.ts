@@ -54,6 +54,7 @@ declare module "react-phone-input-2" {
       data: CountryData | {},
       formattedValue: string
     ): void;
+    onDropdownStateChange?(isOpen: boolean): void;
   }
 
   export interface PhoneInputProps extends PhoneInputEventsProps, Style {

@@ -94,6 +94,7 @@ class PhoneInput extends React.Component {
     onKeyDown: PropTypes.func,
     onEnterKeyPress: PropTypes.func,
     onMount: PropTypes.func,
+    onDropdownStateChange: PropTypes.func,
     isValid: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.func,
@@ -248,11 +249,17 @@ class PhoneInput extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
+    const { onDropdownStateChange } = this.props;
+
     if (prevProps.country !== this.props.country) {
       this.updateCountry(this.props.country);
     }
     else if (prevProps.value !== this.props.value) {
       this.updateFormattedNumber(this.props.value);
+    }
+
+    if (onDropdownStateChange) {
+      onDropdownStateChange(this.state.showDropdown);
     }
   }
 
