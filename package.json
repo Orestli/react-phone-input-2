@@ -1,5 +1,5 @@
 {
-  "name": "react-phone-input-2",
+  "name": "react-phone-input-2-dropdown-state",
   "version": "2.15.1",
   "description": "A react component to format phone numbers",
   "main": "lib/lib.js",
@@ -12,12 +12,11 @@
     "build:js": "TARGET=build_js NODE_ENV=production webpack -p --progress",
     "build:css": "TARGET=build_css NODE_ENV=production webpack -p --progress && rm ./main.js",
     "prepublishOnly": "npm run build",
-    "analyze": "TARGET=analyze NODE_ENV=production webpack -p --progress",
-    "postinstall": "npm run build"
+    "analyze": "TARGET=analyze NODE_ENV=production webpack -p --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bl00mber/react-phone-input-2.git"
+    "url": "git+https://github.com/orestli/react-phone-input-2.git"
   },
   "keywords": [
     "react",
@@ -41,15 +40,15 @@
     "README.md",
     "index.d.ts"
   ],
-  "author": "Nick Reiley <bloomber111@gmail.com> (https://github.com/bl00mber)",
+  "author": "https://github.com/orestli",
   "contributors": [
-    "Raza Gill <raza.gill@outlook.com> (https://github.com/razagill)"
+    "https://github.com/orestli"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bl00mber/react-phone-input-2/issues"
+    "url": "https://github.com/orestli/react-phone-input-2/issues"
   },
-  "homepage": "https://github.com/bl00mber/react-phone-input-2",
+  "homepage": "https://github.com/orestli/react-phone-input-2",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/test/__mocks__/fileMock.js",
